@@ -1,7 +1,6 @@
 
 const body = document.querySelector("body")
 const divElement = document.createElement("div")
-body.append(divElement)
 // Making the fetch call
 fetch('https://dog.ceo/api/breeds/list/all')
     // Converting received data to JSON
@@ -16,8 +15,12 @@ fetch('https://dog.ceo/api/breeds/list/all')
         // Using Object.keys() and/or Object.values() to get the number of breeds
         console.log(Object.keys(breeds).length);
         console.log(Object.values(breeds).length);
+        // Logging the amount of retriever breeds
+        console.log(breeds.retriever.length);
 
-        divElement.innerText = Object.keys(breeds)[0]
+        divElement.innerText = Object.keys(breeds)[0];
+
+        body.append(divElement);
 
     })
     .catch(error => console.log("Error"));
