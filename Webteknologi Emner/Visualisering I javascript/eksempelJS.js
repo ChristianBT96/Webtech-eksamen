@@ -5,7 +5,7 @@ const ctx = document.querySelector("#myChart")
 // Make the chart
 new Chart(ctx, {
     // Select the type
-    type: 'bar',
+    type: 'line',
     // Select the data
     data: {
         // Labels for the data also used in the legend and on hover

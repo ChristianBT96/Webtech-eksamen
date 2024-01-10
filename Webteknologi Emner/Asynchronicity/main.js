@@ -6,6 +6,26 @@
 // A callback function is a function passed into another function as an argument,
 // which is then invoked inside the outer function to complete some kind of routine or action.
 
+// Example:
+// Creating an array of names.
+const names = ['Lars', 'Jan', 'Peter', 'Bo', 'Frederik'];
+// forEach example:
+names.forEach(function (name) {
+    console.log(name);
+});
+// This will print all the names in the array.
+// forEach takes a callback function as an argument.
+
+// Creating a function that takes an array and a callback function as arguments.
+const myForEach = function (array, callback) {
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i]);
+    }
+};
+// Using the function to print all the names in the array.
+myForEach(names, (name) => {
+    console.log(name);
+});
 
 
 // 2. fetch, setTimeout, addEventListener
@@ -32,6 +52,6 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 // Example:
 function printHelloWorld() {
     console.log('Hello World');
-};
+}
 setTimeout(printHelloWorld, 2000);
 // This will print Hello World after 2 seconds.
